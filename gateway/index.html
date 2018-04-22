@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API | Gateway</title>
+  <link rel="icon" type="image/png" href="http://graphql.org/img/favicon.png" />
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <style>
+    body{background-color: #FFF}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const styles = {display: 'flex', justifyContent: 'center', alignItems: 'center'}
+    class Gateway extends React.Component {
+      render() {
+        return (<div style={styles}><a style={{textDecoration: 'none'}} href="/graphiql">Go to GraphiQL</a></div> )
+      }
+    }
+    ReactDOM.render(
+        <Gateway />,
+        document.getElementById('root')
+    )
+</script>
+
+</body>
+</html>
