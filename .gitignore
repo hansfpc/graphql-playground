@@ -63,5 +63,8 @@ typings/
 .next
 ### JetBrains template
 .idea/
+
+### VSCode template
+.vscode/
 ### macOS template
 .DS_Store

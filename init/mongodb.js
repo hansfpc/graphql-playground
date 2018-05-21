@@ -14,10 +14,10 @@ export default () => {
       },
       err => {
         if (err) {
-          console.log(`🔗 Error connecting to ${DATABASE_URL} 😤 `)
-          console.log(`🔗 ¿Reason?: ${err} `)
+          console.log(`→ Error connecting to ${DATABASE_URL} 😤 `)
+          console.log(`→ ¿Reason?: ${err} `)
         } else {
-          console.log(`🔗 Database connection: OK 🎉 (${DATABASE_URL})`)
+          console.log(`→ Database connection: OK 🎉 (${DATABASE_URL})`)
         }
       }
     )

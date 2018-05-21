@@ -1,4 +1,4 @@
-import User from './User.graphql'
+import User from './User'
 
 export default [
   User,

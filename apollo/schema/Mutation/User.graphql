@@ -1,5 +1,0 @@
-
-type Mutation {
-    addUser(name: String!, email: String): User
-    insertUser(email: String, plainPassword: String): User
-}

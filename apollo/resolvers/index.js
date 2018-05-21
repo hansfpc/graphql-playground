@@ -1,21 +1,17 @@
-const users = [
-  { id: 1, name: 'hans' },
-  { id: 2, name: 'Manuel' },
-  { id: 3, name: 'Diego' }
-]
+import Users from '../../collections/Users'
+import { getAllUsers } from './Query/User/getAllUsers'
 const sites = [
   { id: 1, name: 'cadem.cl', authorId: 1 },
   { id: 2, name: 'ventoora.cl', authorId: 2 },
   { id: 3, name: 'fdc.com', authorId: 3 },
   { id: 4, name: 'trabajando.com', authorId: 1 }
 ]
-import Users from '../../collections/Users'
 
 const resolvers = {
   Query: {
     getAllUsers: () => Users.find({}), // la estructura de cada objeto, debe ser como el type User (busco en la dB)
     sites: () => sites,
-    getUser: (context, { id }) => Users.findOne({_id: id})
+    getUser: (context, { id }) => Users.findOne({ _id: id })
     //getUser: (context, { id }) => users.find(el => el.id === id)
   },
   Mutation: {

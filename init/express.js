@@ -2,7 +2,7 @@ import bodyParser from 'body-parser'
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express'
 import { schema } from '../apollo'
 
-export default function(app, dirname) {
+export default (app, dirname) => {
   const GWPath = `${dirname}/gateway/index.html`
 
   app.set('port', process.env.PORT || 3000)
@@ -11,5 +11,7 @@ export default function(app, dirname) {
   app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }))
   app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }))
   app.get('/', (req, res) => res.sendFile(GWPath))
-  console.log(`🔗 GraphQL Express Server: OK 🎉 (http://localhost:${app.get('port')}/)`)
-}
+  console.log(
+    `→ GraphQL Express Server: OK 🎉 (http://localhost:${app.get('port')}/)`
+  )
+};
