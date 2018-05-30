@@ -5,6 +5,4 @@ const sites = [
   { id: 4, name: 'trabajando.com', authorId: 1 }
 ]
 
-export default function(form, params, context) {
-  return 'site :v'
-}
+export default parent => sites.filter(el => el.authorId === parent.id)

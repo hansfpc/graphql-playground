@@ -1,8 +1,8 @@
 export default `
   type Query {
-    # Get full user list
+    # ➜ Get full users list
     getAllUsers: [User]
-    sites: [Site]
+    # Get a single user
     getUser(id: ID!): User
   }
 `

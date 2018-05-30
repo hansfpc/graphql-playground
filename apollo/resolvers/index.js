@@ -1,5 +1,9 @@
 import Users from '../../collections/Users'
-import { getAllUsers } from './Query/User/getAllUsers'
+import Sites from '../../collections/Sites'
+import getAllUsers from './Query/User/getAllUsers'
+import getUser from './Query/User/getUser'
+import addUser from './Mutation/User/addUser'
+import addSite from './Mutation/Site/addSite'
 const sites = [
   { id: 1, name: 'cadem.cl', authorId: 1 },
   { id: 2, name: 'ventoora.cl', authorId: 2 },
@@ -7,21 +11,16 @@ const sites = [
   { id: 4, name: 'trabajando.com', authorId: 1 }
 ]
 
+import Query from './Query'
+
 const resolvers = {
   Query: {
-    getAllUsers: () => Users.find({}), // la estructura de cada objeto, debe ser como el type User (busco en la dB)
-    sites: () => sites,
-    getUser: (context, { id }) => Users.findOne({ _id: id })
-    //getUser: (context, { id }) => users.find(el => el.id === id)
+    getAllUsers,
+    getUser,
   },
   Mutation: {
-    addUser: (context, { name, email }) => {
-      //users.push({id: users.length + 1, name})
-      return Users.create({
-        name,
-        email
-      })
-    }
+    addUser,
+    addSite,
   },
   User: {
     sites: parent => sites.filter(el => el.authorId === parent.id) // cada vez que use USER, en los sites les harcodeo eso
