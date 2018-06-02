@@ -1,9 +1,10 @@
-import Sites from "../../../../collections/Sites";
+import Sites from '../../../../collections/Sites'
 
-export default (context, {name, url, author}) => {
+export default (context, { site }) => {
+  const { name, url, authorId } = site
   return Sites.create({
     name,
     url,
-    author
+    authorId
   })
 }

@@ -1,4 +1,4 @@
-import site from './site'
+import site from './sites'
 
 export default {
   site

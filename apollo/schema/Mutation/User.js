@@ -1,5 +1,6 @@
 export default `
-    type Mutation {
-      addUser(name: String!, email: String): User
-    }
+  type Mutation {
+    # ➜ Add a new user 
+    addUser(user: NewUser): User
+  }
 `

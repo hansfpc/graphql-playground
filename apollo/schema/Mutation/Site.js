@@ -1,5 +1,6 @@
 export default `
-    extend type Mutation {
-      addSite(name: String!, url: String!, author: String): Site
-    }
+  extend type Mutation {
+    # ➜ Add a new site
+    addSite(site: NewSite): Site
+  }
 `

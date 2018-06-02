@@ -1,32 +1,26 @@
-import Users from '../../collections/Users'
-import Sites from '../../collections/Sites'
 import getAllUsers from './Query/User/getAllUsers'
 import getUser from './Query/User/getUser'
 import addUser from './Mutation/User/addUser'
+import getSite from './Query/Site/getSite'
 import addSite from './Mutation/Site/addSite'
-const sites = [
-  { id: 1, name: 'cadem.cl', authorId: 1 },
-  { id: 2, name: 'ventoora.cl', authorId: 2 },
-  { id: 3, name: 'fdc.com', authorId: 3 },
-  { id: 4, name: 'trabajando.com', authorId: 1 }
-]
-
-import Query from './Query'
+import sites from './Types/User/sites'
+import author from './Types/Site/author'
 
 const resolvers = {
   Query: {
     getAllUsers,
     getUser,
+    getSite
   },
   Mutation: {
     addUser,
-    addSite,
+    addSite
   },
   User: {
-    sites: parent => sites.filter(el => el.authorId === parent.id) // cada vez que use USER, en los sites les harcodeo eso
+    sites
   },
   Site: {
-    author: parent => users.find(el => el.id === parent.authorId)
+    author
   }
 }
 
