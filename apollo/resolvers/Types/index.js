@@ -1,4 +1,11 @@
 import { sites } from './User'
 import { author } from './Site'
 
-export { author, sites }
+module.exports = {
+  Site: {
+    author,
+  },
+  User: {
+    sites,
+  },
+}
