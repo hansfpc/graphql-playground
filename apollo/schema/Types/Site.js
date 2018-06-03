@@ -1,5 +1,4 @@
 export default `
-  # This is a User in our project
   type Site{
     id: ID!,
     name: String!,

@@ -8,18 +8,18 @@
     "server": "nodemon node index.js"
   },
   "dependencies": {
-    "apollo-server-express": "^1.3.5",
+    "apollo-server-express": "^1.3.6",
     "bcrypt-nodejs": "^0.0.3",
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "graphql": "^0.13.2",
-    "graphql-tools": "^2.24.0",
-    "mongoose": "^5.0.15"
+    "graphql-tools": "^3.0.2",
+    "mongoose": "^5.1.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^1.17.4"
   }
 }

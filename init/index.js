@@ -3,5 +3,5 @@ import initMongo from './mongodb'
 
 module.exports = {
   initExpress,
-  initMongo
+  initMongo,
 }

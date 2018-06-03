@@ -1,5 +1,3 @@
 import author from './author'
 
-export {
-  author
-}
+export { author }

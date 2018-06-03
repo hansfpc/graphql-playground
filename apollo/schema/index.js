@@ -3,11 +3,9 @@ import Mutation from './Mutation'
 import Types from './Types'
 //import Scalars from './Scalars'
 
-/* TODO: Add custom scalars later */
-
 export default [
   ...Query,
   ...Mutation,
-  ...Types
+  ...Types,
   //...Scalars
 ]

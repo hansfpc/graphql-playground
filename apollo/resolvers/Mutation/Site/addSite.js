@@ -5,6 +5,6 @@ export default (context, { site }) => {
   return Sites.create({
     name,
     url,
-    authorId
+    authorId,
   })
 }
