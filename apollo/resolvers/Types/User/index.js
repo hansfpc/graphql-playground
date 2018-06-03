@@ -1,5 +1,5 @@
-import site from './sites'
+import sites from './sites'
 
-export default {
-  site
+export {
+  sites
 }

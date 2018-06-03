@@ -1,7 +1,3 @@
-import User from './User'
-import Site from './Site'
-
-export default {
-  ...User,
-  ...Site
-}
+import { addUser } from './User'
+import { addSite } from './Site'
+export { addUser, addSite }

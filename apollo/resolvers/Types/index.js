@@ -1,7 +1,4 @@
-import User from './User'
-import Site from './Site'
+import { sites } from './User'
+import { author } from './Site'
 
-export default {
-  User,
-  Site
-}
+export { author, sites }

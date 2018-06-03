@@ -1,6 +1,6 @@
 import getAllSites from './getAllSites'
 import getSite from './getSite'
-export default {
+export  {
   getAllSites,
   getSite
 }

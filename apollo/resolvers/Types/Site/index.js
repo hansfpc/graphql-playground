@@ -1,5 +1,5 @@
 import author from './author'
 
-export default {
+export {
   author
 }

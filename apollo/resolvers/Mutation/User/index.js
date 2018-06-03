@@ -1,4 +1,4 @@
 import addUser from './addUser'
-export default {
+export {
   addUser,
 }
