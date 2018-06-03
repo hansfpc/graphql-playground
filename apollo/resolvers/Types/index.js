@@ -1,7 +1,7 @@
 import { sites } from './User'
 import { author } from './Site'
 
-module.exports = {
+export default {
   Site: {
     author,
   },
