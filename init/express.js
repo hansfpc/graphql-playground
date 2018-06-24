@@ -12,7 +12,5 @@ export default (app, dirname) => {
   app.use(GRAPHQL_ENDPOINT, bodyParser.json(), graphqlExpress({ schema }))
   app.use(GRAPHIQL_ENDPOINT, graphiqlExpress({ endpointURL: GRAPHQL_ENDPOINT }))
   app.get('/', (req, res) => res.sendFile(GWPath))
-  console.log(
-    `→ GraphQL Express Server: OK 🎉 (http://localhost:${app.get('port')}/)`
-  )
+  console.log(`→ GraphQL Express Server: OK 🎉 (http://localhost:${app.get('port')}/)`)
 }
