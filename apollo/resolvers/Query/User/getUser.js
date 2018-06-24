@@ -1,3 +1,3 @@
 import Users from '../../../../collections/Users'
 
-export default (context, { id }) => Users.findOne({ _id: id })
+export default (parent, { id }) => Users.findOne({ _id: id })
