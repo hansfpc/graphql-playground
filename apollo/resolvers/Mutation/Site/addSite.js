@@ -1,6 +1,6 @@
 import Sites from '../../../../collections/Sites'
 
-export default (parent, { site }) => {
+export default (root, { site }) => {
   const { name, url, authorId } = site
   return Sites.create({
     name,

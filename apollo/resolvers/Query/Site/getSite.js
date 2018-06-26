@@ -1,3 +1,3 @@
 import Sites from '../../../../collections/Sites'
 
-export default (parent, { id }) => Sites.findOne({ _id: id })
+export default (root, { id }) => Sites.findOne({ _id: id })

@@ -1,6 +1,6 @@
 import Users from '../../../../collections/Users'
 
-export default (parent, { user }) => {
+export default (root, { user }) => {
   const { name, email } = user
   return Users.create({
     name,
