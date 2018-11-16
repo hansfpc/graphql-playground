@@ -1,3 +1,4 @@
-import { addUser } from './User'
+import { addUser, login, signup } from './User'
 import { addSite } from './Site'
-export { addUser, addSite }
+
+export { addUser, addSite, login, signup }

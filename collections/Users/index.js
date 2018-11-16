@@ -3,7 +3,11 @@ import mongoose from 'mongoose'
 
 const UserSchema = new mongoose.Schema(
   {
-    name: {
+    firstname: {
+      type: String,
+      required: true,
+    },
+    lastname: {
       type: String,
       required: true,
     },
@@ -21,6 +25,18 @@ const UserSchema = new mongoose.Schema(
       type: String,
       enum: ['READER', 'CREATOR', 'EDITOR'],
       default: 'READER',
+    },
+    jwt: {
+      type: String,
+    },
+    version: {
+      type: Number,
+    },
+    username: {
+      type: String,
+      lowercase: true,
+      unique: true,
+      required: true,
     },
   },
   {

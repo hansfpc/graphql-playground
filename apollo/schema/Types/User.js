@@ -1,15 +1,25 @@
 export default `
-  type User{
+  type User {
     id: ID!,
-    name: String!,
+    firstname: String,
+    lastname: String,
     email: String!,
     role: String,
     createdAt: String,
     updatedAt: String,
-    sites: [Site]
+    sites: [Site],
+    jwt: String,
+    username: String!
   }
-  input NewUser{
-    name: String!,
+  input NewUser {
+    name: String,
     email: String!,
+  }
+  input NewUserSignup {
+    firstname: String!,
+    lastname: String!,
+    email: String!,
+    username: String!
+    password: String!
   }
 `
